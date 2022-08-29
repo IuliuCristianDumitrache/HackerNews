@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">HackerNews</string>
+    <string name="no_internet">No Internet</string>
+    <string name="news_root_transaction">news_root_transaction</string>
+    <string name="error_getting_item">Error getting item, please connect to internet</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/topStoriesFragment">
+
+    <fragment
+        android:id="@+id/topStoriesFragment"
+        android:name="com.example.hackernews.ui.topstories.TopStoriesFragment"
+        android:label="TopStoriesFragment"
+        tools:layout="@layout/fragment_top_stories">
+        <action
+            android:id="@+id/action_topStoriesFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.hackernews.ui.news.NewsFragment"
+        android:label="NewsFragment"
+        tools:layout="@layout/fragment_news">
+        <argument
+            app:argType="com.example.hackernews.models.NewsModel"
+            android:name="news"/>
+    </fragment>
+</navigation>
