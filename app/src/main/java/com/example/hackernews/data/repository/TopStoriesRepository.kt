@@ -18,4 +18,8 @@ class TopStoriesRepository {
     ) {
         GetNewsRemoteTask(newsTaskListener).execute(id)
     }
+
+    fun fetchTopStoriesFromDB(topStoriesTaskListener: OnTopStoriesTaskDoneListener) {
+        GetTopStoriesDBTask(topStoriesTaskListener).execute()
+    }
 }

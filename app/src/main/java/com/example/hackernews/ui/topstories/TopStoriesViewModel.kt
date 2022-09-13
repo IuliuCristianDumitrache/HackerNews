@@ -57,7 +57,7 @@ class TopStoriesViewModel : ViewModel(), OnTopStoriesTaskDoneListener {
 
     fun getListOfIdsFromDb() {
         viewModelScope.launch {
-            topStoriesRepository.fetchTopStories(object : OnTopStoriesTaskDoneListener {
+            topStoriesRepository.fetchTopStoriesFromDB(object : OnTopStoriesTaskDoneListener {
                 override fun onTaskDone(responseData: ArrayList<Int>?) {
                     topStoriesIdList.postValue(responseData)
                 }
